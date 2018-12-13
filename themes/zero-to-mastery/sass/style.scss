@@ -1,0 +1,33 @@
+/*!
+Theme Name: Zero to mastery
+Author: Rafał Woszczak
+Version: 1.0
+Tested Resolutions: 320px -1280 px 
+Tested browsers: Google Chrome, Mozilla Firefox, IE11 - without progressbar
+*/
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/base.scss";
+@import "base/typhography.scss";
+@import "layout/navigation.scss";
+@import "layout/footer.scss";
+@import "frontpage/header.scss";
+@import "frontpage/aboutsection.scss";
+@import "frontpage/reviewssection.scss";
+@import "frontpage/discordsection.scss";
+@import "frontpage/projectssection.scss";
+@import "pages/reviewspage.scss";
+@import "pages/projectspage.scss";
+@import "pages/resourcespage.scss";
+@import "pages/blogpage.scss";
+@import "pages/search-alternative.scss";
+@import "components/search-overlay.scss";
+@import "components/sidebar.scss";
+@import "components/buttons.scss";
+@import "components/screenvideo.scss"; 
+@import "components/popup.scss";
+@import "components/ldbar.scss";
+@import "components/single-project.scss";
+@import "components/like-box.scss";
+@import "components/back-to-archive.scss";

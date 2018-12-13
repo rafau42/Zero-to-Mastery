@@ -1,0 +1,52 @@
+.about {
+  background-color: $color-grey;
+  display: flex;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 20px;
+
+  @include respond(under800) {
+    flex-direction: column;
+  }
+
+  @include respond(under500) {
+    font-size: 16px;
+  }
+
+  &__column--screen {
+    width: 60%;
+
+    @include respond(under800) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include respond(under600) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__column--text {
+    width: 40%;
+    @include respond(under800) {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    margin: 1rem 0 2rem 0;
+    color: $color-red;
+    font-size: 3.1rem;
+  }
+
+  &__heading-span {
+    font-size: 4.7rem;
+  }
+
+  &__paragraph {
+    width: 80%;
+    padding: 2rem;
+    background-color: $color-grey-darker;
+    margin: 2% auto;
+  }
+}

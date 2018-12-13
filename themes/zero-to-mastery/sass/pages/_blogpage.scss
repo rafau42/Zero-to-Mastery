@@ -1,0 +1,52 @@
+
+.header-blog {
+  position: relative;
+  width: 100%;
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-content {
+  width: 70%;
+  padding-top: 20px;
+
+  @include respond(under800) {
+    width: 100%;
+  }
+}
+
+.blog-post {
+  padding: 2rem 4rem;
+  border-bottom: 0.1rem solid $color-dark;
+
+  &__title {
+    color: $color-red-darker;
+  }
+
+  &__read-more {
+    display: block;
+    padding-top: 1rem;
+    color: $color-blue;
+    text-align: right;
+  }
+}
+
+.pagination {
+  width: 100%;
+  padding: 4rem 0;
+  font-size: 20px;
+  text-align: center;
+  color: $color-blue;
+}
+
+.page-numbers {
+  color: inherit;
+}

@@ -1,0 +1,122 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  max-width: 128rem;
+  background-color: rgba($color-black, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    background-color: $color-grey;
+    width: 75%;
+
+    @include absCenter;
+
+    @include respond(under900) {
+      width: 95%;
+    }
+    @include respond(under700) {
+      width: 75%;
+    }
+    @include respond(under500) {
+      width: 95%;
+    }
+  }
+
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.04rem solid $color-black;
+    padding: 1rem 0;
+  }
+
+  &__heading {
+    margin-left: 2rem;
+    color: $color-blue;
+    font-size: 24px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-blue-light;
+  }
+
+  &__close {
+    background-color: transparent;
+    border: 0.3rem solid transparent;
+    padding: 0 1rem;
+    transition: all 0.5s;
+    font-size: 4rem;
+    color: $color-black;
+
+    &:hover,
+    &:focus {
+      border: 0.3rem solid $color-blue;
+    }
+  }
+
+  &__icon {
+    font-size: 30px;
+  }
+
+  &__content-bottom {
+    display: flex;
+    margin-top: 2%;
+    font-size: 20px;
+
+    @include respond(under1000) {
+      font-size: 18px;
+    }
+
+    @include respond(under700) {
+      font-size: 16px;
+    }
+
+    @include respond(under700) {
+      flex-direction: column;
+    }
+
+    &--column {
+      width: 50%;
+
+      @include respond(under700) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__list-span {
+    &--blue {
+      color: $color-blue-light;
+    }
+
+    &--red {
+      color: $color-red;
+    }
+  }
+
+  &__discord-span {
+    margin: 4%;
+  }
+
+  &__gif {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 2rem auto;
+
+    @include respond(under700) {
+      width: 60%;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+.header-projects {
+  background-color: $color-blue-light;
+
+  &__heading {
+    padding: 2% 0 0 4%;
+    font-size: 2.8rem;
+  }
+  &__heading-span {
+    margin-left: 2rem;
+    font-size: 5rem;
+  }
+
+  &__wrap-image {
+    width: 50%;
+    margin: 0 auto;
+
+    @include respond(under900) {
+      width: 60%;
+    }
+    @include respond(under600) {
+      width: 70%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.section-projects {
+  color: $color-grey;
+
+  &__projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-grey-darker;
+    padding: 3rem 6rem;
+
+    @include respond(under900) {
+      padding: 3rem 0;
+    }
+  }
+}
+
+.project {
+  border-radius: 1.5%;
+  background-color: $color-blue;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  width: calc((100% / 3 - 1rem));
+  margin: 0.5rem;
+  text-align:center;
+
+  @media screen\0 {
+    display: block;
+  }
+
+  @include respond(under800) {
+    width: calc(50% - 1rem);
+    margin: 0.5rem 0.5rem;
+  }
+
+  @include respond(under600) {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__wrap-image {
+    position: relative;
+    width: 90%;
+    margin: 3.5% 5%;
+
+    &:hover .project__wrap-text,
+    &:focus .project__wrap-text {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 8px;
+    right: 4px;
+    color: $color-blue-lighter;
+    font-size: 50px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__wrap-text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(36, 62, 206, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    @include absCenter;
+
+    > p {
+      margin: 0 10px;
+      transition: 0.2s;
+    }
+  }
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("images/constructinglarge.jpg");
+  background-position: 50% 60%;
+
+  @include respond(under900) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("images/constructingmedium.jpg");
+  }
+
+  @include respond(under600) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("images/constructingsmall.jpg");
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 0 2rem 0;
+
+    @include respond(under400) {
+      font-size: 22px;
+    }
+  }
+
+  &__text-box {
+    text-align: center;
+  }
+}

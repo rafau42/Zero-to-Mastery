@@ -1,0 +1,18 @@
+.back-to-archive {
+  width: 100%;
+  background-color: $color-dark;
+
+  &__wrap {
+    padding: 2rem 0;
+  }
+
+  &__link {
+    font-size: 18px;
+    color: $color-grey;
+    margin-left: 3rem;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
+}

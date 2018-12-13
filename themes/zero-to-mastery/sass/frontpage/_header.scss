@@ -1,0 +1,41 @@
+.header-main {
+  position: relative;
+  height: 61rem;
+  background-image: url("images/herolarge.jpg");
+  background-position: center center;
+  background-size: cover;
+
+  @include respond(under900) {
+    background-image: url("images/heromedium.jpg");
+  }
+  @include respond(under600) {
+    background-image: url("images/herosmall.jpg");
+  }
+
+  @include respond(under500) {
+    background-position: 35% 50%;
+  }
+
+  &__text-box { 
+    @include absHeader;
+    color: $color-white;
+    text-align: center;
+    line-height: 1.2;
+
+    @include respond(under500) {
+      @include absCenter;
+    }
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+  }
+  
+  &__span {
+    font-size: 12rem;
+  }
+  
+  &__sub-heading {
+    margin-bottom: 3rem;
+  }
+}

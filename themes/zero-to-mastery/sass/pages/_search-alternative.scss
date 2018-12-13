@@ -1,0 +1,35 @@
+.search-page {
+  &__form-wrap {
+    position: relative;
+    height: 200px;
+  }
+}
+
+.search-form {
+  @include absCenter;
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+
+  &__placeholder {
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 18px;
+
+    @include respond(under500) {
+      font-size: 16px;
+      width: 70%;
+    }
+  }
+
+  &__submit {
+    display: inline-block;
+    height: 35px;
+    width: 80px;
+
+    @include respond(under500) {
+      width: 70px;
+    }
+  }
+}

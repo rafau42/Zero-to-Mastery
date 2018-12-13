@@ -1,0 +1,66 @@
+.section-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 4rem;
+    background-color: $color-grey-darker;
+  
+    @include respond(under1100) {
+      padding: 4rem 2rem;
+    }
+  
+    @include respond(under900) {
+      flex-direction: column;
+      padding: 4rem 0;
+    }
+  
+    &__column {
+      width: 50%;
+  
+      @include respond(under900) {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  .review {
+    background-color: $color-blue;
+    width: 94%;
+    border-radius: 2%;
+    margin: 1rem auto;
+    padding: 0.7rem 1.2rem;
+    color: $color-white;
+  
+    @include respond(under900) {
+      margin: 15px 0 0 0;
+    }
+  
+    &__blockquote {
+      position: relative;
+      margin: 0;
+      font-style: italic;
+      font-size: 20px;
+  
+      @include respond(under500) {
+        font-size: 16px;
+      }
+  
+      &:before {
+        content: "\201C";
+        display: block;
+        position: absolute;
+        top: -0.75em;
+        left: -0.05em;
+        color: $color-red;
+        font-size: 600%;
+      }
+    }
+  
+    &__cite {
+      display: block;
+      margin-right: 2rem;
+      padding-bottom: 1.1rem;
+      text-align: right;
+    }
+  }
+  

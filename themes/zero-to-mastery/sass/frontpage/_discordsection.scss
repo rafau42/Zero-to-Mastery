@@ -1,0 +1,101 @@
+.section-discord {
+  background-color: $color-grey;
+
+  &__header {
+    padding-top: 36rem;
+    padding-bottom: 9rem;
+    background-image: url("images/discordbackgroundlarge.jpg");
+    background-position: center center;
+    background-size: cover;
+
+    @include respond(under900) {
+      background-image: url("images/discordbackgroundmedium.jpg");
+      padding-top: 5rem;
+      padding-bottom: 33rem;
+    }
+ 
+    @include respond(under600) {
+      background-image: url("images/discordbackgroundsmall.jpg");
+      padding-top: 0rem;
+      padding-bottom: 25rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    @include respond(under700) {
+      flex-direction: column;
+    }
+  }
+
+  &__column--text {
+    width: 50%;
+    margin-left: 1rem;
+    font-size: 20px;
+
+    @include respond(under900) {
+      width: 65%;
+      margin-left: 1rem;
+    }
+    @include respond(under700) {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    @include respond(under500) {
+      font-size: 16px;
+    }
+  }
+  
+  &__heading {  
+    text-align: center;
+    color: $color-red;
+
+    @include respond(under800) {
+
+    }
+  }
+
+  &__heading-span {
+    font-size: 4rem;
+  }
+
+  &__text-box {
+    background-color: $color-grey-darker;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  &__btn-wrap {
+    text-align: center;
+  }
+
+  &__column--discord-widget {
+    margin-right: 1.5rem;
+    width: 35%;
+    @include respond(under900) {
+      display: flex;
+      width: initial;
+      margin: 2rem 0.5rem;
+    }
+  }
+
+  &__discord-widget {
+    width: 100%;
+    margin-top: 2rem;
+    height: 92%;
+
+    @include respond(under900) {
+      width: 95%;
+      margin: 0 auto;
+    }
+
+    @include respond(under700) {
+      width: 75%;
+      height: 40rem;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.about {
+  &__video-container {
+    position: relative;
+    height: 49rem;
+
+    @include respond(under800) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include respond(under700) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__screen {
+    z-index: 1;
+    width: 90%;
+    height: 86.4%;
+    @include absCenter;
+  }
+
+  &__video {
+    width: 82.7%;
+    height: 59.1%;
+    z-index: 2;
+    @include absVideo;
+  }
+}

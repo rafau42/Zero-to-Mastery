@@ -1,0 +1,112 @@
+.project-single {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+  
+    @include respond(under1000) {
+      width: 90%;
+    }
+  
+    @include respond(under900) {
+      width: 95%;
+    }
+  
+    @include respond(under700) {
+      flex-direction: column;
+      width: 95%;
+    }
+
+    @media screen and (max-width: 700px), screen\9 {
+      display:block;
+      }
+
+    &__image-wrap {
+      width: 40%;
+  
+      @include respond(under700) {
+        width: 100%;
+      }
+    }
+  
+    &__image {
+      display: block;
+      width: 90%;
+      height: auto;
+      margin: 0 3% 0 2%;
+  
+      @include respond(under700) {
+        width: 80%;
+        margin: 0 auto;
+      }
+  
+      @include respond(under600) {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  
+    &__text {
+      width: 60%;
+  
+      > p {
+        @include respond(under800) {
+          margin: 0;
+        }
+  
+        @include respond(under700) {
+          margin: 1em 0;
+        }
+      }
+  
+      @include respond(under700) {
+        width: 90%;
+        margin: 0 auto;
+        padding: 50px 0 20px 0;
+        text-align: center;
+      }
+  
+      @include respond(under400) {
+        width: 95%;
+      }
+    }
+  
+    &__project-title {
+      font-size: 24px;
+    }
+    &__progress-bar {
+      position: relative;
+      margin: 3rem auto 0 auto;
+  
+      @include respond(under1100) {
+        margin: 0 auto;
+      }
+  
+      .ldBar-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  
+    &__contributors-wrapper {
+      padding: 4rem 0;
+      margin: 0 auto;
+  
+      @include respond(under700) {
+        width: 80%;
+        margin: 0 auto;
+      }
+      @include respond(under400) {
+        width: 90%;
+      }
+    }
+  
+    &__contributors-headline {
+      display: inline-block;
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+  }

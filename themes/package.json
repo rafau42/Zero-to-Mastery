@@ -1,0 +1,29 @@
+{
+  "name": "zero-to-mastery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bxslider": "^4.2.14",
+    "ionicons": "^4.4.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.2",
+    "bundle-js": "^1.0.2",
+    "compress-images": "^1.4.6",
+    "node-sass": "^4.9.4",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.0.1"
+  },
+  "scripts": {
+    "watch:theme": "browser-sync start --proxy \"zero-to-mastery-website.local\" --files \"zero-to-mastery\"",
+    "watch:sass": "node-sass zero-to-mastery/sass/style.scss zero-to-mastery/style.css -w",
+    "bundle:js": "bundle-js ./zero-to-mastery/js/scripts.js -o ./zero-to-mastery/js/scripts-bundled.js",
+    "compile:sass": "node-sass zero-to-mastery/sass/style.scss zero-to-mastery/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions'\" zero-to-mastery/css/style.comp.css -o zero-to-mastery/css/style.prefix.css",
+    "compress:css": "node-sass zero-to-mastery/css/style.prefix.css zero-to-mastery/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Rafał Woszczak",
+  "license": "ISC"
+}

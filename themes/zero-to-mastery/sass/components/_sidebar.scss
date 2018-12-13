@@ -1,0 +1,30 @@
+.sidebar {
+  background-color: $color-grey-darker;
+  width: 30%;
+
+  @include respond(under800) {
+    width: 100%;
+  }
+}
+
+.widget-resources {
+  padding: 4rem 2rem;
+
+  &__headline {
+      @include respond(under900) {
+          font-size: 19px;
+      }
+  }
+  &__image {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+
+    @include respond(under800) {
+      width: 40%;
+    }
+  }
+  &__link {
+    color: $color-red-darker;
+  }
+}

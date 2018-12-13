@@ -1,0 +1,145 @@
+.sticky {
+  position: fixed;
+}
+
+.navigation {
+  width: 100%;
+  max-width: 128rem;
+  background-color: $color-dark;
+  z-index: 3;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 128rem;
+    background-color: $color-dark;
+    color: $color-grey;
+
+    @include respond(under900) {
+      border-bottom: 0.3rem solid $color-grey;
+    }
+  }
+
+  &__site-title {
+    margin-left: 4rem;
+    padding: 1rem 0;
+    font-size: 24px;
+
+    @include respond(under900) {
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+
+  &__right-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__login {
+    margin-right: 1rem;
+  }
+
+  &__toggle-main {
+    display: none;
+    background-color: $color-dark;
+    
+    @include respond(under900) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    font-size: 20px;
+    color: $color-white;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border: 0.2rem solid $color-dark;
+
+    &:hover {
+      border: 0.2rem solid $color-grey;
+    }
+  }
+
+  &__list {
+    margin: 0 0.5rem 0 0;
+
+    @include respond(under900) {
+      display: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__item {
+    margin-right: 2rem;
+    display: inline-block;
+    padding: 1rem 0;
+    font-size: 18px;
+
+    @include respond(under900) {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 1.8rem 0 1.8rem 0;
+      border-bottom: 0.3rem solid $color-grey;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $color-white;
+    padding-bottom: 0.15rem;
+    border-bottom: 0.2rem solid $color-dark;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom: 0.2rem solid $color-grey;
+      -webkit-transition: border-bottom 0.2s, color 0.2s;
+      transition: border-bottom 0.2s, color 0.2s;
+    }
+
+    @include respond(under900) {
+      padding-left: 4rem;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: 0;
+      }
+    }
+  }
+
+  &__link--no-border {
+    border: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border: 0;
+    }
+  }
+
+  &__toggle--sub {
+    display: none;
+    width: 100%;
+    padding: 1.8rem 3rem;
+    color: $color-grey;
+    background-color: $color-dark;
+
+    @include respond(under900) {
+      display: block;
+      border-bottom: 0.3rem solid $color-grey;
+    }
+  }
+
+  &__icon--sub {
+    margin-left: 2rem;
+  }
+}

@@ -1,0 +1,64 @@
+.status-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0 12rem 0;
+  background: $color-grey-darker;
+  max-width: 100%;
+
+  &__project-title {
+    color: $color-red-darker;
+    font-size: 20px;
+  }
+
+  &__post-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    background: $color-grey-darker;
+    font-size: 20px;
+
+    @media screen\0 {
+      display:block;
+      text-align: center;
+    }
+
+    @include respond(under600) {
+      width: 90%;
+    }
+
+    @include respond(under500) {
+      font-size: 16px;
+    }
+  }
+
+  &__progress-bar {
+    position: relative;
+  }
+
+  &__contributors-wrapper {
+    width: 100%;
+    padding: 4rem 0 6rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__contributors-headline {
+    font-size: 20px;
+    color: $color-blue;
+    padding-right: 2rem;
+
+    @include respond(under500) {
+      font-size: 16px;
+    }
+  }
+}
+
+.ldBar-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

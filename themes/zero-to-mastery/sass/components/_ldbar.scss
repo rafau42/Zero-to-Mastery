@@ -1,0 +1,41 @@
+.ldBar {
+  top: 2rem;
+  width: 80%;
+  height: 20%;
+  font-size: 20px;
+  text-align: center;
+
+  @include respond(under500) {
+    font-size: 16px;
+  }
+}
+
+.ldBar-label {
+  width: 100%;
+
+  .ldBar {
+    position: relative;
+  }
+
+  .ldBar.label-center > .ldBar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 3px #fff;
+  }
+
+  .ldBar-label:after {
+    content: "%";
+    display: inline;
+  }
+
+  .ldBar.no-percent .ldBar-label:after {
+    content: "";
+  }
+
+  &:after {
+    content: "% complete";
+  }
+}

@@ -1,0 +1,50 @@
+.header-resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+
+  @include respond(under800) {
+  }
+
+  &__image {
+    @include respond(under800) {
+      width: 90%;
+    }
+  }
+  &__headline {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 4rem;
+  }
+}
+
+.resources {
+  padding: 6rem 12rem;
+
+  @include respond(under900) {
+    padding: 4rem 4rem;
+  }
+
+  &__content-top {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  &__headline {
+    padding-bottom: 2rem;
+    font-weight: 500;
+    color: $color-blue;
+    font-size: 24px;
+  }
+
+  &__post-title {
+    font-size: 20px;
+  }
+
+  &__link {
+    color: $color-red-darker;
+  }
+}
